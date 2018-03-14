@@ -1,0 +1,3 @@
+#! /bin/bash
+
+gunicorn --env "TRUSTED_HOSTS=http://localhost:8080" --workers 2 --reload --bind :8081 wsgi:app
